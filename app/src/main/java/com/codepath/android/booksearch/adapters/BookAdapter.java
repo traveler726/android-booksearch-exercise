@@ -45,6 +45,7 @@ public class BookAdapter extends ArrayAdapter<Book> {
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
+            viewHolder.ivCover.setImageResource(0); // Clear out any previous image if reusing!
         }
         // Populate data into the template view using the data object
         viewHolder.tvTitle.setText(book.getTitle());
